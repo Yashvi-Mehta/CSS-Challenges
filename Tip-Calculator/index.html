@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Tip Calculator</title>
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body>
+      <div class="container">
+         <form class="form">
+            <h1>Tip Calculator</h1>
+            <div class="form-control">
+               <label for="bill_amt">Bill Amount:</label>
+               <input
+                  type="text"
+                  id="bill_amt"
+                  class="tip_input"
+                  placeholder="Enter bill amount in INR"
+               />
+               <small>Error message</small>
+            </div>
+            <div class="form-control">
+               <label for="service">How was the service?</label>
+               <select name="service" id="service">
+                  <option value="null" disabled selected>
+                     Select an option
+                  </option>
+                  <option value="30">Excellent &mdash; 30%</option>
+                  <option value="20">Good &mdash; 20%</option>
+                  <option value="15">Decent Enough &mdash; 15%</option>
+                  <option value="10">Okish &mdash; 10%</option>
+                  <option value="5">Bad &mdash; 5%</option>
+               </select>
+               <small>Error message</small>
+            </div>
+            <div class="form-control">
+               <label for="person">How many people are sharing the bill?</label>
+               <input
+                  type="text"
+                  name="person"
+                  id="person"
+                  class="tip_input"
+                  placeholder="2 people"
+               />
+               <small>Error message</small>
+            </div>
+            <button value="Submit" id="submit_values">Submit</button>
+            <div id="tip_amt">
+               <h3>Tip amount per person: &nbsp;</h3>
+               <h3><span id="amt"></span> INR</h3>
+            </div>
+         </form>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
