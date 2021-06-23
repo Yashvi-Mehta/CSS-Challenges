@@ -70,19 +70,7 @@ body {
          }
          small {
             color: var(--error-color);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            visibility: hidden;
-         }
-         .success input {
-            border-color: $success-color;
-         }
-         .error input {
-            border-color: $error-color;
-         }
-         .error small {
-            visibility: visible;
+            display: none;
          }
       }
       #tip_amt {
@@ -90,6 +78,21 @@ body {
       }
       #tip_amt.calculated {
          display: flex;
+      }
+      .form-control.success {
+         input,
+         select {
+            border-color: $success-color;
+         }
+      }
+      .form-control.error {
+         input,
+         select {
+            border-color: $error-color;
+         }
+      }
+      .form-control.error small {
+         display: block;
       }
    }
 }

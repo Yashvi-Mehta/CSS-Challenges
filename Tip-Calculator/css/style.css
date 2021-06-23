@@ -77,22 +77,7 @@ body {
 
 .container .form .form-control small {
   color: var(--error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.container .form .form-control .success input {
-  border-color: #2ecc71;
-}
-
-.container .form .form-control .error input {
-  border-color: #e74c3c;
-}
-
-.container .form .form-control .error small {
-  visibility: visible;
+  display: none;
 }
 
 .container .form #tip_amt {
@@ -101,5 +86,19 @@ body {
 
 .container .form #tip_amt.calculated {
   display: flex;
+}
+
+.container .form .form-control.success input,
+.container .form .form-control.success select {
+  border-color: #2ecc71;
+}
+
+.container .form .form-control.error input,
+.container .form .form-control.error select {
+  border-color: #e74c3c;
+}
+
+.container .form .form-control.error small {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
